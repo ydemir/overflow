@@ -23,7 +23,7 @@ public static class SearchInitializer
             new ("id",FieldType.String),
             new ("title",FieldType.String),
             new ("content",FieldType.String),
-            new ("tags", FieldType.String) ,
+            new("tags", FieldType.StringArray),
             new ("createdAt",FieldType.Int64),
             new ("answerCount",FieldType.Int32),
             new ("hasAcceptedAnswer",FieldType.Bool)
