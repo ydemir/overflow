@@ -115,7 +115,7 @@ app.MapGet("/search/similar-titles", async (string query, ITypesenseClient clien
 });
 using var scope=app.Services.CreateScope();
 var client = scope.ServiceProvider.GetRequiredService<ITypesenseClient>();
-await client.DeleteCollection("questions");
+
 await SearchInitializer.EnsureIndexExists(client);
 app.Run();
 

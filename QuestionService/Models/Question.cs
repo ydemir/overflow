@@ -5,7 +5,7 @@ namespace QuestionService.Models;
 public class Question
 {
     [MaxLength(36)]
-    public string Id { get; set; }=Guid.NewGuid().ToString();
+    public string Id { get; set; } = Guid.NewGuid().ToString();
     [MaxLength(300)]
     public required string Title { get; set; }
     [MaxLength(5000)]
@@ -20,4 +20,7 @@ public class Question
     public List<string> TagSlugs { get; set; } = [];
     public bool HasAcceptedAnswer { get; set; }
     public int Votes { get; set; }
+    public int AnswerCount { get; set; }
+// navigation properties
+    public List<Answer> Answers { get; set; } = [];
 }
